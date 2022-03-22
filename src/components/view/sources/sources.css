@@ -1,0 +1,121 @@
+.sources {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-height: 33.5em;
+    align-items: center;
+    font: 300 1em 'Fira Sans', sans-serif;
+    padding-top: 5px;
+    overflow: hidden;
+    transition: max-height 1.5s ease-out;
+}
+
+.sources.all {
+    height: auto;
+    max-height: 170em;
+    transition: max-height 1.5s ease-out;
+}
+
+.source__item {
+    background: none;
+    border: 2px solid #30c5ff;
+    font: inherit;
+    line-height: 1;
+    margin: 0 0.6em 0.6em 0;
+    padding: 0.6em 0.6em;
+    color: #70d6ff;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.source__item.active,
+.source__item:hover,
+.source__item:focus {
+    border-color: #3fcc59;
+    color: #69db7e;
+    box-shadow: 0 0.5em 0.5em -0.4em #3fcc59;
+    transform: translateY(-0.25em);
+}
+
+.source__item-name {
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+.all-source {
+    background: none;
+    border: 2px solid #fff;
+    font: inherit;
+    line-height: 1;
+    margin-top: 0.8em;
+    padding: 0.6em 0.6em;
+    color: #fff;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.all-source:hover,
+.all-source:focus {
+    border: 2px solid #fff;
+    color: #fff;
+    box-shadow: 0 0.5em 0.5em -0.4em #fff;
+    transform: scale(1.02);
+}
+
+@media (max-width: 1300px) {
+    .source__item-name {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 1200px) {
+    .sources.all {
+        max-height: 200em;
+    }
+}
+
+@media (max-width: 1000px) {
+    .sources.all {
+        max-height: 230em;
+    }
+}
+
+@media (max-width: 900px) {
+    .sources {
+        max-height: 6em;
+    }
+
+    .sources.all {
+        max-height: 80em;
+    }
+}
+
+@media (max-width: 700px) {
+    .sources.all {
+        max-height: 110em;
+    }
+}
+
+@media (max-width: 550px) {
+    .sources.all {
+        max-height: 150em;
+    }
+}
+
+@media (max-width: 400px) {
+    .source__item {
+        padding: 0.5em 0.5em;
+    }
+
+    .source__item-name {
+        font-size: 0.85em;
+    }
+
+    .sources {
+        max-height: 5.4em;
+    }
+
+    .sources.all {
+        max-height: 185em;
+    }
+}
